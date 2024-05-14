@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>DYNAMIC ONE-PAGE WEBSITE</title>
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	</head>
+	<body>
+		<nav>
+			<div class="navbar">
+				<p><a href="#">Home</a></p>
+				<p><a href="#product">Products</a></p>
+				<p><a href="#contact">Contact Us</a></p>
+			</div>
+		</nav>
+		<main>
+			<div class="hero">
+				<div class="left-side">
+					<h1 class="title">SPECIAL OFFER</h1>
+					<h1 class="bold">SUMMER</h1>
+					<h1 class="small">BIG SALE</h1>
+					<div class="span">
+						<p>Don't miss out on our special summer big sale!</p>
+					</div>
+				</div>
+				<div>
+					<div class="banner">
+						<section>
+							<h1>30%</h1>
+							<h1>OFF</h1>
+						</section>
+						<section>
+							<div
+								class="countdown"
+								id="days">
+								<p class="number">00</p>
+								<span>DAYS</span>
+							</div>
+							<div
+								class="countdown"
+								id="hours">
+								<p class="number">00</p>
+								<span>HOURS</span>
+							</div>
+							<div
+								class="countdown"
+								id="minutes">
+								<p class="number">00</p>
+								<span>MINUTES</span>
+							</div>
+							<div
+								class="countdown"
+								id="seconds">
+								<p class="number">00</p>
+								<span>SECONDS</span>
+							</div>
+						</section>
+						<button class="shop"><a href="#product">Shop the Sale</a></button>
+					</div>
+				</div>
+			</div>
+			<div
+				class="discount"
+				id="product">
+				<div
+					class="scroller"
+					data-speed="fast">
+					<ul class="tag-list scroller__inner">
+						<li>30% DISCOUNT</li>
+						<li>30% OFF!</li>
+						<li>Save Big with Our 20% Discount!</li>
+					</ul>
+				</div>
+			</div>
+			<div class="wrapper">
+				<i
+					id="left"
+					class="fa-solid fa-angle-left"></i>
+				<div class="carousel"></div>
+				<i
+					id="right"
+					class="fa-solid fa-angle-right"></i>
+			</div>
+			<div id="contact">
+				<div class="contacts">
+					<h1>Contact Sales</h1>
+					<p>
+						Let us commence this conversation. Kindly provide some information
+						about yourself, and we shall endeavor to reach out to you at our
+						earliest convenience.
+					</p>
+					<form
+						action="#"
+						method="post">
+						<div class="form">
+							<input
+								type="text"
+								name="name"
+								placeholder="First Name"
+								required />
+							<input
+								type="text"
+								name="name"
+								placeholder="Last Name"
+								required />
+						</div>
+						<input
+							type="text"
+							name="email"
+							placeholder="Work Email"
+							required />
+						<textarea
+							name="message"
+							placeholder="Your Message"
+							required></textarea>
+						<div id="submit">
+							<button class="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div
+				id="myModal"
+				class="modal">
+				<div class="modal-content">
+					<p>Your message has been submitted. Thank you!</p>
+					<span class="close">&times;</span>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

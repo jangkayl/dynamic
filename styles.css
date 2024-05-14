@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.navbar {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	height: 4rem;
+	margin: 0 0 2rem 0;
+	background-color: black;
+	color: white;
+}
+
+nav p {
+	margin: 0 1.5rem 0 1.5rem;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.title {
+	font-weight: 400;
+}
+
+.bold {
+	font-weight: 900;
+	font-size: 4rem;
+}
+
+.small {
+	font-weight: 600;
+	font-size: 3.5rem;
+}
+
+.span {
+	line-height: 3;
+}
+
+.title,
+.bold,
+.small {
+	line-height: 1;
+}
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 40rem;
+	height: 30rem;
+	gap: 2rem;
+	border: 1px solid black;
+	border-radius: 1rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+}
+
+main section h1 {
+	font-size: 6rem;
+	padding: 0px;
+	line-height: 1;
+}
+
+main section {
+	gap: 2rem;
+	display: flex;
+	flex-direction: row;
+}
+
+main button {
+	border: 0;
+	background-color: black;
+	color: white;
+	padding: 0.6rem;
+	border-radius: 0.5rem;
+}
+
+main section div {
+	text-align: center;
+}
+
+.countdown .number {
+	padding: 0.5rem;
+	background-color: black;
+	font-size: 2rem;
+	font-weight: 600;
+	width: 6rem;
+	border-radius: 0.5rem;
+	color: white;
+	cursor: pointer;
+}
+
+.countdown span {
+	font-size: 0.8rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+.shop:hover,
+.number:hover {
+	background-color: #4f4e4e;
+	transition: all ease-in-out 200ms;
+}
+
+/* CAROUSEL */
+
+.wrapper {
+	display: flex;
+	max-width: 80%;
+	position: relative;
+}
+
+.wrapper i {
+	top: 50%;
+	height: 44px;
+	width: 44px;
+	color: #343f4f;
+	cursor: pointer;
+	font-size: 1.15rem;
+	position: absolute;
+	text-align: center;
+	line-height: 44px;
+	background: #fff;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	transition: transform 0.1s linear;
+	border: 1px solid grey;
+	z-index: 1;
+}
+
+.wrapper i:active {
+	transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+	background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+	left: -22px;
+	display: none;
+}
+
+.wrapper i:last-child {
+	right: -22px;
+}
+
+.wrapper .carousel {
+	font-size: 0px;
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+}
+
+.wrapper .carousel img:hover {
+	transform: scale(1.05);
+}
+
+.carousel.dragging {
+	cursor: grab;
+	scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+	pointer-events: none;
+}
+
+.carousel img {
+	border-radius: 1rem;
+	height: 340px;
+	object-fit: cover;
+	user-select: none;
+	margin-left: 14px;
+	width: calc(100% / 3);
+	transition: transform 0.2s ease;
+}
+
+.carousel img:hover {
+	transform: scale(1.05);
+}
+
+.carousel img:first-child {
+	margin-left: 0px;
+}
+
+#product {
+	padding: 1rem 0;
+}
+
+/* FORM */
+
+.contacts {
+	max-width: 700px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts h1,
+.contacts p {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+input[type="text"],
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+textarea {
+	height: 150px;
+}
+
+#submit {
+	display: flex;
+	justify-content: center;
+}
+
+.submit {
+	background-color: #4caf50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	width: 80%;
+	justify-content: center;
+}
+
+.submit:hover {
+	background-color: #45a049;
+}
+
+.form {
+	display: flex;
+	gap: 1rem;
+}
+
+/* MODAL  */
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: auto;
+	transition: opacity 1s;
+}
+
+.modal-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	border-radius: 8px;
+	text-align: center;
+	position: relative;
+}
+
+.close {
+	position: absolute;
+	right: 1.5rem;
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.scroller {
+	max-width: 1000px;
+}
+
+.scroller__inner {
+	padding-block: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+	overflow: hidden;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+	width: max-content;
+	flex-wrap: nowrap;
+	animation: scroll var(--_animation-duration, 40s)
+		var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-speed="fast"] {
+	--_animation-duration: 20s;
+}
+
+@keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 0.5rem));
+	}
+}
+
+.tag-list {
+	margin: 0;
+	padding-inline: 0;
+	list-style: none;
+	letter-spacing: 0.6rem;
+}
+
+.tag-list li {
+	font-weight: bold;
+	font-size: 2rem;
+	padding: 1rem;
+	background: var(--clr-primary-400);
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1073px) {
+	.small {
+		font-size: 2.5rem;
+	}
+	.bold {
+		font-size: 3rem;
+	}
+	.title {
+		font-size: 1.6rem;
+	}
+	p {
+		font-size: 0.9rem;
+	}
+	.banner {
+		width: 30rem;
+	}
+	.banner h1 {
+		font-size: 4rem;
+	}
+	.banner section {
+		gap: 0.5rem;
+	}
+	.number {
+		font-size: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.carousel img {
+		width: calc(100% / 2);
+	}
+
+	.banner {
+		width: 25rem;
+		height: 25rem;
+	}
+
+	.countdown .number {
+		font-size: 1.4rem;
+		width: 3.4rem;
+	}
+	.left-side {
+		padding-left: 0.6rem;
+	}
+	.span p {
+		line-height: 2;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	.carousel img {
+		width: 100%;
+	}
+
+	.banner {
+		width: 20rem;
+	}
+
+	.hero {
+		padding: 2rem;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.title,
+	.bold,
+	.small {
+		font-size: 3rem;
+	}
+
+	.navbar {
+		gap: 2rem;
+		padding-right: 1rem;
+		height: auto;
+		margin: 0;
+	}
+
+	nav p {
+		margin: 1rem 0;
+	}
+
+	.countdown .number {
+		font-size: 1.5rem;
+	}
+
+	main section h1 {
+		font-size: 4rem;
+	}
+
+	main section div {
+		width: 100%;
+	}
+
+	.discount {
+		padding: 2rem 0;
+	}
+
+	.contacts {
+		padding: 2rem;
+	}
+
+	.form {
+		flex-direction: column;
+	}
+
+	input[type="text"],
+	textarea {
+		width: 100%;
+	}
+
+	#submit .submit {
+		width: 100%;
+	}
+
+	.modal-content {
+		margin: 15% auto;
+		width: 90%;
+	}
+}
